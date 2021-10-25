@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+</head>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+    }
+    i {
+        width: 20px;
+        height: 20px;
+        color: white;
+        position: absolute;
+        right: 15%;
+        top: 15px;
+    }
+     .dropdown-Navbar{
+        border: 5px solid;
+        border-color: rgb(110,0,1);
+        background-color: rgb(110,0,1);
+        padding: 18px 200px;
+        overflow: hidden;
+    }
+    .dropdown-Navbar .dropdown-content {
+        display: none;
+        position: absolute;
+        top: 5%;
+        right: 15%;
+        background-color: rgb(110,0,1);
+        width: 100px;
+        z-index: 1;
+    }
+
+    .dropdown-content a{
+        float: none;
+        color: white;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 5px 8px;
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        font-size: 12px;
+        
+    }
+    .dropdown-content a:hover{
+        background-color: red;
+    }
+    .dropdown-Navbar:hover .dropdown-content{
+        display: block;
+    }
+    .dropdown-Navbar .dropdown-content hr{
+        width: 80px;
+        color: rgb(148,6,9);
+        height: 0.1px;
+        border-color: red;
+        margin: -2px 0 -2px 10px;
+    }
+    .NavBar {
+        background-color: rgb(187,10,2);
+        height: 100px;
+        width: 100%;
+    } 
+    .NavBar span{
+        font-family: 'Niagara Solid';
+        color: white;
+        position: relative;
+        top: 20%;
+        padding: 3%;
+        font-size: 45px;
+    } 
+    .NavBar .InlineNavbar {
+        position: relative;
+        top: -10%;
+        margin-left: 60%;
+        margin-top: -10px;
+    }
+    .NavBar .InlineNavbar a{
+        position: relative;
+        display: inline-block;
+        text-decoration: none;
+        font-family: Arial;
+        color: white;
+        font-size: 15px;
+        margin-top: -25px;
+        padding: 40px 20px;
+    }
+    .NavBar .InlineNavbar a:hover{
+        background-color: red;
+    }
+    .payment-content {
+        width: 100%;
+        height: 350px;
+    }
+    .payment-content #restaurant{
+        position: absolute;
+        width: 300px;
+        height:280px;
+        top: 200px;
+        left: 200px;
+    }
+    .payment-content .confirmdata1{
+        margin-top: 70px;
+        margin-left: 700px;
+    }
+    .payment-content .confirmdata1 span{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        display: block;
+        font-size: 18px;
+    }
+    .payment-content .confirmdata1 #person{
+        margin-top: 5px;
+        padding: 10px 12px;
+        padding-top: 18px;
+        border: 3px solid lightgray;
+        width: 70px;
+        height: 30px;
+        padding-left: 30px;
+    }
+    .payment-content .confirmdata1 i{
+        position: absolute;
+        top: 260px;
+        left: 710px;
+        color: black;
+        font-size: 30px;
+    }
+    .payment-content .confirmdata2 {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 18px;
+        position: absolute;
+        top: 216px;
+        left: 70%;
+    }
+    .payment-content .confirmdata2 span{
+        display: block;
+        
+    }
+    .payment-content .confirmdata2 #time{
+        margin-top: 5px;
+        padding: 10px 12px;
+        padding-top: 18px;
+        border: 3px solid lightgray;
+        width: 70px;
+        height: 30px;
+    }
+    .payment-content .confirmdata2 i{
+        margin-top: 30px;
+        font-size: 25px;
+        color: black;
+    }
+    .payment-content .confirmdata3{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 18px;
+        position: absolute;
+        top: 50%;
+        left: 46%;
+    }
+    .payment-content .confirmdata3 span{
+        display: block;
+    }
+    .payment-content .confirmdata3 #schedule{
+        margin-top: 5px;
+        padding: 10px 12px;
+        padding-left: 30px;
+        padding-top: 18px;
+        border: 3px solid lightgray;
+        width: 100px;
+        height: 30px;
+    }
+    .payment-content .confirmdata3 i{
+        margin-top: 28px;
+        font-size: 25px;
+        color: black;
+    }
+    .payment-content .confirmdata4{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 18px;
+        position: absolute;
+        top: 50%;
+        left: 70%;
+    }
+    .payment-content .confirmdata4 .benefit-img{
+        margin-left: 10px;
+        margin-top: 5px;
+    }
+    .payment-content .confirmdata4 .benefit-img img{
+        width: 50px;
+        height: 50px;
+        margin-right: 50px;
+    }
+    .payment-content .confirmdata4 .benefit-text{
+        font-size: 12px;
+    }
+    .payment-content .confirmdata4 .benefit-text span{
+        margin-right: 26px;
+    }
+    .payment-detail{
+        width: 35%;
+        height: 300px;
+        margin-left: 8%;
+    }
+    .payment-detail span{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 25px;
+        margin-left: 13%;
+    }
+    .payment-detail .payment-detail-list{
+        padding: 15px 10px;
+        background-color: lightgrey;   
+        margin-left: 13%;
+        border-radius: 15px;
+    }
+    .payment-detail .payment-detail-list hr{
+        width: 420px;
+        background-color: black;
+        height: 2px;
+        margin-top: -1%;
+        margin-bottom: -1%;
+    }
+    .payment-detail .payment-detail-list ul{
+        list-style-type: none;
+        display: inline-block;
+        margin-left: -5%;
+        margin-right: 8%;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .payment-detail .payment-detail-list .Total-Price{
+        margin-left: 33%;
+    }
+    .payment-detail .payment-detail-list .Grand-total{
+        width: 400px;
+        height: 30px;
+        background-color: rgb(187,10,2);
+        margin-left: 3%;
+        padding: 5px 5px;
+        color: white;
+        border-radius: 15px;
+    }
+    .PayWay {
+        position: absolute;
+        top: 75%;
+        left: 50%;
+    }
+    .PayWay span{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 25px;
+    }
+    .PayWay .PayType{
+        background-color: rgb(226, 226, 226);
+        display: block;
+        position: relative;
+        padding: 8px 20px;
+        padding-bottom: 28px;
+        border-radius: 15px;
+    }
+    .PayWay .PayType .Payment-1 #BCA{
+        width: 200px;
+        height: 80px;
+        position: absolute;
+        left: 10%;
+    }
+    .PayWay .PayType .Payment-1 #COD{
+        width: 200px;
+        height: 70px;
+        position: absolute;
+        left: 60%;
+    }
+    .PayWay .PayType .Payment-1 input[type='radio']{
+        width: 25px;
+        height: 25px;
+        margin-right: 250px;
+        margin-top: 30px;
+    }
+    .PayWay .PayType .Payment-2 #Mandiri{
+        width: 210px;
+        height: 60px;
+        position: absolute;
+        left: 10%;
+        margin-top: 5%;
+    }
+    
+    .PayWay .PayType .Payment-2 #BNI{
+        width: 200px;
+        height: 70px;
+        position: absolute;
+        left: 60%;
+        margin-top: 4%;
+    }
+    .PayWay .PayType .Payment-2 input[type='radio']{
+        width: 25px;
+        height: 25px;
+        margin-right: 250px;
+        margin-top: 50px;
+    }
+    .PayWay button{
+        margin-top: 5%;
+        padding: 10px 15px;
+        margin-left: 30%;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: white;
+        background-color: rgb(187,10,2);
+    }
+    .PayWay button:hover{
+        background-color: red;
+    }
+    .footer {
+        margin-top: 50px;
+        width: 100%;
+        height: 80px;
+        background-color: rgb(110,0,1);
+        color: whitesmoke;
+        opacity: 0.8;
+    }
+    .footer span{
+        position: absolute;
+        margin-top: 30px;
+        margin-left: 30px;
+    }
+    #this{
+        background-color: red;
+    }
+</style>
+<body>
+    <div class="dropdown-Navbar">
+        <i class="fas fa-user"></i>
+        <div class="dropdown-content">
+            <a href="Login.html">LOG IN</a>
+            <hr>
+            <a href="Register.html">REGISTER</a>
+        </div>
+    </div>
+    <div class="NavBar">
+        <span>RISEVARE</span>
+        <div class="InlineNavbar">
+            <a href="Home Page.html">HOME</a>
+            <a href="About Us.html">ABOUT US</a>
+            <a href="Payment Page.html"id="this">PAYMENT</a>
+            <a href="Reservation Page.html" >RESERVATION</a>
+        </div>
+    </div>
+    <div class="payment-content">
+        <img src="Asset/Home Page/restaurant/Holycow! Steakhouse.png" alt="Holycow" id="restaurant">
+        <div class="confirmdata1">
+            <span>GUESTS</span>
+            <i class="fas fa-male"></i>
+            <span id="person">4 Person</span>
+        </div>
+        <div class="confirmdata2">
+            <span>TIME</span>
+            <i class="fas fa-clock"></i>
+            <span id="time">13:00</span>
+        </div>
+        <div class="confirmdata3">
+            <span>DATE</span>
+            <i class="fas fa-calendar"></i>
+            <span id="schedule">3 April</span>
+        </div>
+        <div class="confirmdata4">
+            <span>BENEFITS</span>
+            <div class="benefit-img">
+                <img src="Asset/Home Page/playground.png" alt="">
+                <img src="Asset/Home Page/car.png" alt="">
+                <img src="Asset/Home Page/qr-code.png" alt="">
+                <img src="Asset/Home Page/valet.png" alt="">
+            </div>
+            <div class="benefit-text">
+                <span>PLAYGROUND</span>
+                <span>DINE-IN CAR</span>
+                <span>QR-PAYMENT</span>
+                <span>VALET SERVICE</span>
+            </div>
+        </div>
+    </div>
+    <div class="payment-detail">
+        <span>SELECTED MENU</span>
+        <div class="payment-detail-list">
+            <ul class="Menu-name">
+                <li>Wagyu Rib Eye</li>
+                <li>Kids Steak</li>
+                <li>Wagyu Tenderloin Steak Set</li>
+            </ul>
+            <ul class="Menu-quanti">
+                <li>1x</li>
+                <li>2x</li>
+                <li>1x</li>
+            </ul>
+            <ul class="Menu-price">
+                <li>Rp 180.500</li>
+                <li>Rp 140.250</li>
+                <li>Rp 208.125</li>
+            </ul>
+            <hr>
+            <ul class="Total-List">
+                <li>Total Item:</li>
+                <li>Booking Fee:</li>
+                <li>Tax 10%:</li>
+            </ul>
+            <ul class="Total-Price">
+                <li>Rp. 528.875</li>
+                <li>Rp. 50.000</li>
+                <li>Rp. 57.888</li>
+            </ul>
+            <div class="Grand-total">
+                <span>Grand Total: </span>
+                <span>Rp 636.763</span>
+            </div>
+        </div>
+    </div>
+    <div class="PayWay">
+        <span>PAYMENT METHODE</span>
+        <form action="" class="PayType">
+            <div class="Payment-1">
+                <input type="radio" name="payway" value="Bank BCA">
+                <input type="radio" name="payway" value="Bayar Ditempat">
+                <img src="Asset/Payment Page/Asset/BCA Pay.png" alt="BCA" id="BCA">
+                <img src="Asset/Payment Page/Asset/COD.png" alt="COD" id="COD">
+            </div>
+            <div class="Payment-2">
+                <input type="radio" name="payway" value="Bank Mandiri">
+                <input type="radio" name="payway" value="Bank BNI">
+                <img src="Asset/Payment Page/Asset/Mandiri.png" alt="Mandiri" id="Mandiri">
+                <img src="Asset/Payment Page/Asset/BNI.png" alt="BNI" id="BNI">
+            </div>
+        </form>
+        <button type="submit">CONFIRM PAYMENT</button>
+    </div>
+    <div class="footer">
+        <span>Copyright &#169 2021 by RISEVARE | Privacy Policy</span>
+    </div>
+</body>
+</html>

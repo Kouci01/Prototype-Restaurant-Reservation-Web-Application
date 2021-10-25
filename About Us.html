@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+    <title>About Us</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+    i {
+        width: 20px;
+        height: 20px;
+        color: white;
+        position: absolute;
+        right: 15%;
+        top: 15px;
+    }
+     .dropdown-Navbar{
+        border: 5px solid;
+        border-color: rgb(110,0,1);
+        background-color: rgb(110,0,1);
+        padding: 18px 200px;
+        overflow: hidden;
+    }
+    .dropdown-Navbar .dropdown-content {
+        display: none;
+        position: absolute;
+        top: 5%;
+        right: 15%;
+        background-color: rgb(110,0,1);
+        width: 100px;
+        z-index: 1;
+    }
+
+    .dropdown-content a{
+        float: none;
+        color: white;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 5px 8px;
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        font-size: 12px;
+        
+    }
+    .dropdown-content a:hover{
+        background-color: red;
+    }
+    .dropdown-Navbar:hover .dropdown-content{
+        display: block;
+    }
+    .dropdown-Navbar .dropdown-content hr{
+        width: 80px;
+        color: rgb(148,6,9);
+        height: 0.1px;
+        border-color: red;
+        margin: -2px 0 -2px 10px;
+    }
+    .NavBar {
+        background-color: rgb(187,10,2);
+        height: 100px;
+        width: 100%;
+    } 
+    .NavBar span{
+        font-family: 'Niagara Solid';
+        color: white;
+        position: relative;
+        top: 20%;
+        padding: 3%;
+        font-size: 45px;
+    } 
+    .NavBar .InlineNavbar {
+        position: relative;
+        top: -10%;
+        margin-left: 60%;
+        margin-top: -10px;
+    }
+    .NavBar .InlineNavbar a{
+        position: relative;
+        display: inline-block;
+        text-decoration: none;
+        font-family: Arial;
+        color: white;
+        font-size: 15px;
+        margin-top: -25px;
+        padding: 40px 20px;
+    }
+    .NavBar .InlineNavbar a:hover{
+        background-color: red;
+    }
+    .content{
+        margin-top: 10%;
+        background-image: url("Asset/About Us/Asset/Background.png");
+        width: 100%;
+        height: 350px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: white;
+        padding: 12px 180px;
+        position: relative;
+    }
+    .content h2{
+        margin-bottom: -5px;
+        font-size: 45px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    .content p{
+        font-size: 20px;
+        margin-bottom: -5px;
+        font-weight: lighter;
+        font-family: 'Times New Roman', Times, serif;
+        margin-left: 300px;
+        -webkit-transform:scale(1.5,1.5); /* Safari and Chrome */
+        -moz-transform:scale(1.5,1.5); /* Firefox */
+        -ms-transform:scale(1.5,1.5); /* IE 9 */
+        -o-transform:scale(1.5,1.5); /* Opera */
+        transform:scale(1.5,1.5);
+    }
+    .content img{
+        position: absolute;
+        top: -150px;
+        right: 19%;
+        height: 700px;
+        width: 900px;
+    }
+    .founder h1{
+        text-align: center;
+        margin-left: -50px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 40px;
+        -webkit-transform:scale(1,1.5); /* Safari and Chrome */
+        -moz-transform:scale(1,1.5); /* Firefox */
+        -ms-transform:scale(1,1.5); /* IE 9 */
+        -o-transform:scale(1,1.5); /* Opera */
+        transform:scale(1,1.5);
+        font-weight: normal;
+    }
+    .founder .founder-image{
+        margin-left: 300px;
+        margin-top: 3%;
+        margin-bottom: 5px;
+    }
+    .founder .founder-image img{
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+        margin-right: 250px;
+    }
+    .founder .founder-name{
+        font-size: 25px;
+        display: inline;
+        font-weight: lighter;
+        margin-left: 250px;
+    }
+    .founder .founder-name span{
+        margin-right: 150px;
+    }
+    .footer {
+        margin-top: 50px;
+        width: 100%;
+        height: 80px;
+        background-color: rgb(110,0,1);
+        color: whitesmoke;
+        opacity: 0.8;
+    }
+    .footer span{
+        position: absolute;
+        margin-top: 30px;
+        margin-left: 30px;
+    }
+    #this{
+        background-color: red;
+    }
+</style>
+<body>
+    <div class="dropdown-Navbar">
+        <i class="fas fa-user"></i>
+        <div class="dropdown-content">
+            <a href="Login.html">LOG IN</a>
+            <hr>
+            <a href="Register.html">REGISTER</a>
+        </div>
+    </div>
+    <div class="NavBar">
+        <span>RISEVARE</span>
+        <div class="InlineNavbar">
+            <a href="Home Page.html">HOME</a>
+            <a href="About Us.html" id="this">ABOUT US</a>
+            <a href="Payment Page.html">PAYMENT</a>
+            <a href="Reservation Page.html">RESERVATION</a>
+        </div>
+    </div>
+    <div class="content">
+        <h2>ABOUT US</h2>
+        <p>We are committed to providing the best service</p>
+        <p>in booking a place to eat at your favourite restau-</p>
+        <p>rant without the hassle and without the need to</p> 
+        <p>queue in a crowd.</p>
+        <img src="Asset/About Us/Asset/cloche.png" alt="">
+    </div>
+    <div class="founder">
+        <h1>OUR FOUNDERS</h1>
+        <div class="founder-image">
+            <img src="Asset/About Us/Asset/ariel.jfif" alt="Ariel Peaceo Gunawan">
+            <img src="Asset/About Us/Asset/carlos.jfif" alt="Carlos Martius">
+            <img src="Asset/About Us/Asset/wishnu.jfif" alt="Wishnu Anindito">
+        </div>
+        <div class="founder-name">
+            <span>Ariel Peaceo Gunawan</span>
+            <span>Carlos Martius</span>
+            <span style="margin-left: 30px;">Wishnu Anindito</span>
+        </div>
+    </div>
+    <div class="footer">
+        <span>Copyright &#169 2021 by RISEVARE | Privacy Policy</span>
+    </div>
+</body>
+</html>

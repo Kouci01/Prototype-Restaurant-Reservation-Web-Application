@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+    <title>Home Page</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+     i {
+        width: 20px;
+        height: 20px;
+        color: white;
+        position: absolute;
+        right: 15%;
+        top: 15px;
+    }
+    .dropdown-Navbar{
+        border: 5px solid;
+        border-color: rgb(110,0,1);
+        background-color: rgb(110,0,1);
+        padding: 18px 200px;
+        overflow: hidden;
+    }
+    .dropdown-Navbar .dropdown-content {
+        display: none;
+        position: absolute;
+        top: 5%;
+        right: 15%;
+        background-color: rgb(110,0,1);
+        width: 100px;
+        z-index: 1;
+    }
+
+    .dropdown-content a{
+        float: none;
+        color: white;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 5px 8px;
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        font-size: 12px;
+        
+    }
+    .dropdown-content a:hover{
+        background-color: red;
+    }
+    .dropdown-Navbar:hover .dropdown-content{
+        display: block;
+    }
+    .dropdown-Navbar .dropdown-content hr{
+        width: 80px;
+        color: rgb(148,6,9);
+        height: 0.1px;
+        border-color: red;
+        margin: -2px 0 -2px 10px;
+    }
+    .NavBar {
+        background-color: rgb(187,10,2);
+        height: 100px;
+        width: 100%;
+    } 
+    .NavBar span{
+        font-family: 'Niagara Solid';
+        color: white;
+        position: relative;
+        top: 20%;
+        padding: 3%;
+        font-size: 45px;
+    } 
+    .NavBar .InlineNavbar {
+        position: relative;
+        top: -10%;
+        margin-left: 60%;
+        margin-top: -10px;
+    }
+    .NavBar .InlineNavbar a{
+        position: relative;
+        display: inline-block;
+        text-decoration: none;
+        font-family: Arial;
+        color: white;
+        font-size: 15px;
+        margin-top: -25px;
+        padding: 40px 20px;
+    }
+    .NavBar .InlineNavbar a:hover{
+        background-color: red;
+    }
+    .searchbox {
+        text-align: center;
+    }
+    .searchbox i{
+        position: absolute;
+        color: black;
+        font-size: 30px;
+        top: 29%;
+        left: 41%;
+    }
+    .searchbox #searchbox{
+        margin-top: 60px;
+        width: 250px;
+        height: 50px;
+        font-weight: bold;
+        padding-left: 52px;
+        border-radius: 25px;
+        opacity: 0.7;
+    }
+    h1{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 45px;
+        text-align: center;
+        margin-top: 50px;
+    }
+    .checkavailable {
+        text-align: center;
+        margin-top: 50px;
+    }
+    .checkavailable #personlist{
+        width: 150px;
+        height: 40px;
+        padding-left: 52px;
+    }
+    .checkavailable #date{
+        margin-left: 130px;
+        margin-right: 150px;
+    }
+    .checkavailable i {
+        position: absolute;
+        color: black;
+        top: 419px;
+        left: 260px;
+        font-size: 30px;
+    }
+    .checkavailable #date{
+        width: 150px;
+        height: 40px;
+        padding-left: 20px;
+        font-weight: bold;
+        font-family: Arial;
+    }
+    .checkavailable #time {
+        width: 150px;
+        height: 40px;
+        padding-left: 20px;
+        font-weight: bold;
+        font-family: Arial;
+    }
+    .checkavailable #personlist {
+        font-weight: bold;
+        font-family: Arial;
+    }
+    .checkavailable #checkbtn{
+        background-color: rgb(193, 39, 45);
+        margin-left: 55px;
+        padding: 13px 18px;
+        color: white;
+        font-size: 12px;
+        font-weight: bolder;
+        border-radius: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .checkavailable #checkbtn:hover{
+        background-color: rgb(148,6,9);
+    }
+    .Restaurant {
+        text-align: center;
+        margin-top: 100px;
+    }
+    .Restaurant .restaurant{
+        width: 250px;
+        height: 300px;
+        margin: 0;
+        padding: 0;
+        transition: transform .2s;
+    }
+    .Restaurant .restaurant:hover {
+        transform: scale(1.1);
+    }
+    
+    .facilities{
+        margin-top: 50px;
+        text-align: center;
+    }
+    .facilities img{
+        width: 50px;
+        height: 50px;
+        margin: 0 50px 0 50px;
+    }
+    .facilitiesName {
+        text-align: center;
+        margin-left: 50px;
+    }
+    .facilitiesName span {
+        font-weight: bold;
+        font-family: 'Franklin Gothic Medium';
+        margin: 0 50px 0 8px;
+    }
+    .buttonbook{
+        margin-top: 50px;
+        margin-left: 680px;
+    }
+    .buttonbook button{
+        background-color: rgb(193, 39, 45);
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        padding: 12px 20px;
+        border-radius: 25px;
+    }
+    .buttonbook button:hover{
+        background-color: rgb(110,0,1);
+    }
+    .footer {
+        margin-top: 30px;
+        width: 100%;
+        height: 80px;
+        background-color: rgb(110,0,1);
+        color: whitesmoke;
+        opacity: 0.8;
+    }
+    .footer span{
+        position: absolute;
+        margin-top: 30px;
+        margin-left: 30px;
+    }
+    #HomePage{
+        background-color: red;
+    }
+</style>
+<body>
+    <div class="dropdown-Navbar">
+        <i class="fas fa-user"></i>
+        <div class="dropdown-content">
+            <a href="Login.html">LOG IN</a>
+            <hr>
+            <a href="Register.html">REGISTER</a>
+        </div>
+    </div>
+    <div class="NavBar">
+        <span>RISEVARE</span>
+        <div class="InlineNavbar">
+            <a href="Home Page.html" id="HomePage">HOME</a>
+            <a href="About Us.html">ABOUT US</a>
+            <a href="Payment Page.html">PAYMENT</a>
+            <a href="Reservation Page.html">RESERVATION</a>
+        </div>
+    </div>
+    <div class="searchbox">
+        <i class="fas fa-search"></i>
+        <input type="text" name="searchbox" placeholder="I'm looking for..." id="searchbox">
+    </div>
+    <h1>CHECK AVAILABILITY</h1>
+    <div class="checkavailable">
+        <select name="person" id="personlist">
+            <option value=""></option>
+            <option value="2 Person">2 Person</option>
+            <option value="4 Person">4 Person</option>
+            <option value="8 Person">8 Person</option>
+        </select>
+        <i class="fas fa-male"></i>
+        <input type="date" id="date">
+        <input type="time" id="time">
+        <button type="menu" id="checkbtn">CHECK AVAILABILITY</button>
+    </div>
+    <div class="Restaurant">
+        <img src="Asset/Home Page/restaurant/Bandar Djakarta.png" alt="Bandar Jakarta" class="restaurant">
+        <img src="Asset/Home Page/restaurant/Holycow! Steakhouse.png" alt="HolyCow" class="restaurant">
+        <img src="Asset/Home Page/restaurant/Sushi Tei.png" alt="SushiTei" class="restaurant">
+        <img src="Asset/Home Page/restaurant/Kintan Buffet.png" alt="Kintan" class="restaurant">
+    </div>
+    <div class="buttonbook">
+        <button type="submit" id="book">BOOK NOW!</button>
+    </div>
+    <div class="facilities">
+        <img src="Asset/Home Page/playground.png" alt="PLAY GROUND">
+        <img src="Asset/Home Page/car.png" alt="DINE-IN CAR">
+        <img src="Asset/Home Page/qr-code.png" alt="QR-PAYMENT">
+        <img src="Asset/Home Page/valet.png" alt="VALET SERVICE">
+    </div>
+    <div class="facilitiesName">
+        <span>PLAYGROUND</span>
+        <span>DINE-IN CAR</span>
+        <span>QR-PAYMENT</span>
+        <span>VALET SERVICE</span>
+    </div>
+    <div class="footer">
+        <span>Copyright &#169 2021 by RISEVARE | Privacy Policy</span>
+    </div>
+    <script>
+        document.getElementById("book").addEventListener("click",()=>{
+            window.open("Payment Page.html","_self");
+        })
+    </script>
+</body>
+</html>

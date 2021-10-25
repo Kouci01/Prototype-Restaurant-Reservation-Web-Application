@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation Page</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+</head>
+<style>
+     body{
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+    i {
+        width: 20px;
+        height: 20px;
+        color: white;
+        position: absolute;
+        right: 15%;
+        top: 15px;
+    }
+     .dropdown-Navbar{
+        border: 5px solid;
+        border-color: rgb(110,0,1);
+        background-color: rgb(110,0,1);
+        padding: 18px 200px;
+        overflow: hidden;
+    }
+    .dropdown-Navbar .dropdown-content {
+        display: none;
+        position: absolute;
+        top: 5%;
+        right: 15%;
+        background-color: rgb(110,0,1);
+        width: 100px;
+        z-index: 1;
+    }
+
+    .dropdown-content a{
+        float: none;
+        color: white;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 5px 8px;
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        font-size: 12px;
+        
+    }
+    .dropdown-content a:hover{
+        background-color: red;
+    }
+    .dropdown-Navbar:hover .dropdown-content{
+        display: block;
+    }
+    .dropdown-Navbar .dropdown-content hr{
+        width: 80px;
+        color: rgb(148,6,9);
+        height: 0.1px;
+        border-color: red;
+        margin: -2px 0 -2px 10px;
+    }
+    .NavBar {
+        background-color: rgb(187,10,2);
+        height: 100px;
+        width: 100%;
+    } 
+    .NavBar span{
+        font-family: 'Niagara Solid';
+        color: white;
+        position: relative;
+        top: 20%;
+        padding: 3%;
+        font-size: 45px;
+    } 
+    .NavBar .InlineNavbar {
+        position: relative;
+        top: -10%;
+        margin-left: 60%;
+        margin-top: -10px;
+    }
+    .NavBar .InlineNavbar a{
+        position: relative;
+        display: inline-block;
+        text-decoration: none;
+        font-family: Arial;
+        color: white;
+        font-size: 15px;
+        margin-top: -25px;
+        padding: 40px 20px;
+    }
+    .NavBar .InlineNavbar a:hover{
+        background-color: red;
+    }
+    .button{
+        margin-top: 5%;
+        margin-left: 10%;
+    }
+    .button span{
+        padding: 10px 15px;
+        background-color: rgb(242, 242, 242);
+        font-size: 20px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: rgb(179, 179, 179);
+        border-radius: 25px;
+        margin-right: 40px;
+        -webkit-user-select: none;
+        -webkit-touch-callout: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    .button span:hover{
+        color: rgb(194, 40, 32);
+        background-color: rgb(179, 179, 200);
+    }
+    .content{
+        background-color: rgb(179, 179, 179);
+        width: 100%;
+        display: inline-block;
+        margin-left: 15%;
+        margin-top: 50px;
+        max-width: 1000px;
+        padding: 20px 15px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: white;
+        position: relative;
+        border-radius: 15px;
+    }
+    .content:hover{
+        background-color: rgb(187, 9, 0);
+    }
+    .content .Place{
+        position: relative;
+        
+    }
+    .content .Place span{
+        margin-left: 3%;
+        font-size: 15px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .content .detail{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 20px;
+        margin-left: 45%;
+        position: absolute;
+        top: 50%;
+    }
+    .content .detail span{
+        margin-right: 30px;
+    }
+    .content .Place #Marker{
+        color: rgb(230, 76, 60);
+        position: absolute;
+        top: 70%;
+        left: 1%;
+        font-size: 20px;
+    }
+    .footer {
+        margin-top: 50px;
+        width: 100%;
+        height: 80px;
+        background-color: rgb(110,0,1);
+        color: whitesmoke;
+        opacity: 0.8;
+    }
+    .footer span{
+        position: absolute;
+        margin-top: 30px;
+        margin-left: 30px;
+    }
+    #this{
+        background-color: red;
+    }
+</style>
+<body>
+    <div class="dropdown-Navbar">
+        <i class="fas fa-user"></i>
+        <div class="dropdown-content">
+            <a href="Login.html">LOG IN</a>
+            <hr>
+            <a href="Register.html">REGISTER</a>
+        </div>
+    </div>
+    <div class="NavBar">
+        <span>RISEVARE</span>
+        <div class="InlineNavbar">
+            <a href="Home Page.html">HOME</a>
+            <a href="About Us.html">ABOUT US</a>
+            <a href="Payment Page.html">PAYMENT</a>
+            <a href="Reservation Page.html" id="this">RESERVATION</a>
+        </div>
+    </div>
+    <div class="button">
+        <span style="color: red;">Recently</span>
+        <span>History</span>
+    </div>
+    <div class="content">
+        <div class="Place">
+            <h2>HOLYCOW! STEAKHOUSE</h2>
+            <i class="fas fa-map-marker-alt" id="Marker"></i>
+            <span>Jakarta</span>
+        </div>
+        <div class="detail">
+            <span>PAID</span>
+            <span>WAITING FOR ATTENDANCE</span>
+            <span>3 APRIL</span>
+        </div>
+    </div>
+    <div class="content">
+        <div class="Place">
+            <h2>BANDAR DJAKARTA</h2>
+            <i class="fas fa-map-marker-alt" id="Marker"></i>
+            <span>Tangerang</span>
+        </div>
+        <div class="detail">
+            <span>Payment Failed</span>
+            <span>-</span>
+            <span>3 APRIL</span>
+        </div>
+    </div>
+    <div class="content">
+        <div class="Place">
+            <h2>SUSHI TEI</h2>
+            <i class="fas fa-map-marker-alt" id="Marker"></i>
+            <span>Tangerang</span>
+        </div>
+        <div class="detail">
+            <span>Canceled</span>
+            <span>-</span>
+            <span>3 APRIL</span>
+        </div>
+    </div>
+    <div class="footer">
+        <span>Copyright &#169 2021 by RISEVARE | Privacy Policy</span>
+    </div>
+</body>
+</html>

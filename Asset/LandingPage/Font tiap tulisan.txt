@@ -1,0 +1,5 @@
+RISEVARE = Niagara Solid
+HOME, ABOUT US, PAYMENT, REGISTER, SIGN UP, RESERVATION = Adobe 고딕 Std B
+WELCOME, = Franklin Gothic Book
+VISITOR = Microsoft Yi Baiti
+RESERVE NOW! = Franklin Gothic Demi Cond

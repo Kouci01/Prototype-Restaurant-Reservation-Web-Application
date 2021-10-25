@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+    <title>Landing Page</title>
+</head>
+<style>
+    @import url('http://fonts.cdnfonts.com/css/niagara-solid');
+    /* @import url(//db.onlinewebfonts.com/c/5d22bd0816f911a4c90e5d8661157ef9?family=Microsoft+Yi+Baiti); */
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        background-image: url(Asset/RestaurantRed.png);
+        background-size: cover;
+        background-position-y: 20px;
+        background-repeat: no-repeat;
+    }
+    i {
+        width: 20px;
+        height: 20px;
+        color: white;
+        position: absolute;
+        right: 15%;
+        top: 15px;
+    }
+    .dropdown-Navbar{
+        border: 5px solid;
+        border-color: rgb(110,0,1);
+        background-color: rgb(110,0,1);
+        padding: 18px 200px;
+        overflow: hidden;
+    }
+    .dropdown-Navbar .dropdown-content {
+        display: none;
+        position: absolute;
+        top: 5%;
+        right: 15%;
+        background-color: rgb(110,0,1);
+        width: 100px;
+        z-index: 1;
+    }
+
+    .dropdown-content a{
+        float: none;
+        color: white;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 5px 8px;
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        font-size: 12px;
+        
+    }
+    .dropdown-content a:hover{
+        background-color: red;
+    }
+    .dropdown-Navbar:hover .dropdown-content{
+        display: block;
+    }
+    .dropdown-Navbar .dropdown-content hr{
+        width: 80px;
+        color: rgb(148,6,9);
+        height: 0.1px;
+        border-color: red;
+        margin: -2px 0 -2px 10px;
+    }
+    .NavBar {
+        background-color: rgb(187,10,2);
+        height: 100px;
+        width: 100%;
+    } 
+    .NavBar span{
+        font-family: 'Niagara Solid';
+        color: white;
+        position: relative;
+        top: 20%;
+        padding: 3%;
+        font-size: 45px;
+    } 
+    .NavBar .InlineNavbar {
+        position: relative;
+        top: -10%;
+        margin-left: 60%;
+        margin-top: -10px;
+    }
+    .NavBar .InlineNavbar a{
+        position: relative;
+        display: inline-block;
+        text-decoration: none;
+        font-family: Arial;
+        color: white;
+        font-size: 15px;
+        margin-top: -25px;
+        padding: 40px 20px;
+    }
+    .NavBar .InlineNavbar a:hover{
+        background-color: red;
+    }
+    .WelcomeLanding {
+        margin-top: 12%;
+        margin-left: 43%;
+    }
+    .WelcomeLanding #welcome{
+        color: white;
+        font-family: 'Franklin Gothic Medium';
+        font-size: 45px;
+        font-weight: 100;
+    }
+    .WelcomeLanding hr {
+        width: 210px;
+        height: 2px;
+        margin: 12px 0 0 0;
+        background-color: white;
+    }
+    .WelcomeLanding #visitor{
+        font-size: 80px;
+        margin-left: -2%;
+        text-align: center;
+        color: white;
+        font-family: 'Microsoft Yi Baiti';
+        font-weight: bolder;
+    }
+    .WelcomeLanding button {
+        margin: 40px 0 0 15px;
+        background-color: red;
+        color: white;
+        font-size: 20px;
+        text-align: center;
+        padding: 20px 20px;
+        border-radius: 20px;
+        font-family: 'Franklin Gothic Medium';
+    }
+    .WelcomeLanding button:hover {
+        background-color: orange;
+    }
+    .footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 80px;
+        background-color: rgb(110,0,1);
+        color: whitesmoke;
+        opacity: 0.8;
+    }
+    .footer span{
+        position: absolute;
+        margin-top: 30px;
+        margin-left: 30px;
+    }
+</style>
+<body>
+    
+    <div class="dropdown-Navbar">
+        <i class="fas fa-user"></i>
+        <div class="dropdown-content">
+            <a href="Login.html">LOG IN</a>
+            <hr>
+            <a href="Register.html">REGISTER</a>
+        </div>
+    </div>
+    <div class="NavBar">
+        <span>RISEVARE</span>
+        <div class="InlineNavbar">
+            <a href="Home Page.html">HOME</a>
+            <a href="About Us.html">ABOUT US</a>
+            <a href="Payment Page.html">PAYMENT</a>
+            <a href="Reservation Page.html">RESERVATION</a>
+        </div>
+    </div>
+    <div class="WelcomeLanding">
+        <span id="welcome">WELCOME,</span>
+        <hr>
+        <span id="visitor">VISITOR</span>
+        <br>
+        <button id="reserve">RESERVE NOW!</button>
+    </div>
+    <div class="footer">
+        <span>Copyright &#169 2021 by RISEVARE | Privacy Policy</span>
+    </div>
+    <script>
+        document.getElementById("reserve").addEventListener("click",()=>{
+            window.open("Home Page.html","_self");
+        })
+    </script>
+</body>
+</html>
